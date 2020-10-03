@@ -24,11 +24,10 @@ My submission for the 2nd Timathon. I made 3 projects around the "For Students" 
 - [📝 Table of Contents](#-table-of-contents)
 - [🧐 Problem Statement <a name = "problem_statement"></a>](#-problem-statement-)
 - [💡 Idea / Solution <a name = "idea"></a>](#-idea--solution-)
-- [⛓️ Dependencies / Limitations <a name = "limitations"></a>](#️-dependencies--limitations-)
 - [🚀 Future Scope <a name = "future_scope"></a>](#-future-scope-)
 - [🏁 Getting Started <a name = "getting_started"></a>](#-getting-started-)
-  - [Prerequisites](#prerequisites)
-  - [Installing](#installing)
+  - [Prerequisites <a name = "prerequisites"></a>](#prerequisites-)
+  - [Running the project <a name = "running"></a>](#running-the-project-)
 - [🎈 Usage <a name="usage"></a>](#-usage-)
 - [⛏️ Built With <a name = "tech_stack"></a>](#️-built-with-)
 - [✍️ Authors <a name = "authors"></a>](#️-authors-)
@@ -36,54 +35,31 @@ My submission for the 2nd Timathon. I made 3 projects around the "For Students" 
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
-
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section
-  should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product.
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-  This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
-
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution.
+The timathon theme is "For students". So I had to make something that could be useful for students and that could help them in their everyday life.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-This section is used to describe potential solutions.
+I thought about making an API for homeworks, timetables and other things useful to students. However an API wouldn't be that easy to use, so I made a wrapper for it. But again, you would have to write code and not every student can do that, that's why I decided to make a website for it.
 
-Once the ideal, reality, and consequences sections have been
-completed, and understood, it becomes easier to provide a solution for solving the problem.
-
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
-
-- What are the dependencies of your project?
-- Describe each limitation in detailed but concise terms
-- Explain why each limitation exists
-- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
-- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if
-  appropriate, describe how these limitations could point to the need for further research.
+Students are able to add homeworks, timetables and more things that could help them at school.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
-in the future.
+I'm going to add more endpoints to the API so more functions in the wrapper and more things on the website. If you have any ideas/suggestions, you can leave an issue with a [feature request tag](https://github.com/takos22/timathon2-for-students/labels/feature%20request).
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development
-and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+### Prerequisites <a name = "prerequisites"></a>
 
 What things you need to install the software and how to install them.
 
-```
-Give examples
+```sh
+pip install -r requirements.txt
 ```
 
-### Installing
+### Running the project <a name = "running"></a>
 
 A step by step series of examples that tell you how to get a development env running.
 
