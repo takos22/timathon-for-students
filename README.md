@@ -32,7 +32,6 @@ My submission for the 2nd Timathon. I made 3 projects around the "For Students" 
 - [🎈 Usage <a name="usage"></a>](#-usage-)
 - [⛏️ Built With <a name = "tech_stack"></a>](#️-built-with-)
 - [✍️ Authors <a name = "authors"></a>](#️-authors-)
-- [🎉 Acknowledgments <a name = "acknowledgments"></a>](#-acknowledgments-)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
@@ -105,20 +104,9 @@ Add notes about how to use the system.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Python](https://python.org/) - Language
+- [Flask](https://https://flask.palletsprojects.com/) - Backend for the API and website
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors)
-who participated in this project.
-
-## 🎉 Acknowledgments <a name = "acknowledgments"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- [@takos22](https://github.com/takos22) - Idea & Coding
