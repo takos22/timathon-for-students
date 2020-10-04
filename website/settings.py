@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
+import dotenv
+import json
 from pathlib import Path
+
+dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "+$)t$!uu8))gp126cr$9z6z4aly7rhk338@x1#%3dd0oog-l_7"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(os.environ.get("DEBUG", 0))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = json.loads(os.environ.get("ALLOWED_HOSTS", "[]"))
 
 
 # Application definition
@@ -74,10 +79,20 @@ WSGI_APPLICATION = "website.wsgi.application"
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": [
+        {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": os.environ.get("POSTGRE_DBNAME"),
+            "USER": os.environ.get("POSTGRE_USERNAME"),
+            "PASSWORD": os.environ.get("POSTGRE_PASSWORD"),
+            "HOST": os.environ.get("POSTGRE_HOST"),
+            "PORT": os.environ.get("POSTGRE_PORT"),
+        },
+        {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        },
+    ][0]#[int(os.environ.get("DEBUG", 0))]
 }
 
 
