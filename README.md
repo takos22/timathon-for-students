@@ -81,7 +81,7 @@ Add notes about how to use the system.
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
 - [Python](https://python.org/) - Language
-- [Flask](https://https://flask.palletsprojects.com/) - Backend for the API and website
+- [Django](https://www.djangoproject.com/) - Backend for the API and website
 
 ## ✍️ Authors <a name = "authors"></a>
 
