@@ -79,20 +79,18 @@ WSGI_APPLICATION = "website.wsgi.application"
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    "default": [
-        {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": os.environ.get("POSTGRE_DBNAME"),
-            "USER": os.environ.get("POSTGRE_USERNAME"),
-            "PASSWORD": os.environ.get("POSTGRE_PASSWORD"),
-            "HOST": os.environ.get("POSTGRE_HOST"),
-            "PORT": os.environ.get("POSTGRE_PORT"),
-        },
-        {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        },
-    ][int(os.environ.get("DEBUG", 0))]
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": os.environ.get("POSTGRE_DBNAME"),
+        "USER": os.environ.get("POSTGRE_USERNAME"),
+        "PASSWORD": os.environ.get("POSTGRE_PASSWORD"),
+        "HOST": os.environ.get("POSTGRE_HOST"),
+        "PORT": os.environ.get("POSTGRE_PORT"),
+    },
+    "sqlite": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    },
 }
 
 
