@@ -13,10 +13,9 @@
 
 ---
 
-My submission for the 2nd Timathon. I made 3 projects around the "For Students" theme:
+My submission for the 2nd Timathon. I made a website around the "For Students" theme:
 
 - an API
-- a wrapper for that API
 - a website around the API
 
 ## 📝 Table of Contents
@@ -38,13 +37,13 @@ The timathon theme is "For students". So I had to make something that could be u
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-I thought about making an API for homeworks, timetables and other things useful to students. However an API wouldn't be that easy to use, so I made a wrapper for it. But again, you would have to write code and not every student can do that, that's why I decided to make a website for it.
+I thought about making an API for homeworks, timetables and other things useful to students. However an API alone isn't that easy to use, you would have to write code and not every student can do that, that's why I decided to make a website for it.
 
 Students are able to add homeworks, timetables and more things that could help them at school.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-I'm going to add more endpoints to the API so more functions in the wrapper and more things on the website. If you have any ideas/suggestions, you can leave an issue with a [feature request tag](https://github.com/takos22/timathon2-for-students/labels/feature%20request).
+I'm going to add more endpoints to the API so more functionalities on the website. If you have any ideas/suggestions, you can leave an issue with a [feature request tag](https://github.com/takos22/timathon2-for-students/labels/feature%20request).
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
