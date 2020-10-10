@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the api index.")
+    return JsonResponse({"Endpoints": ["get_homework_by_id"]})
