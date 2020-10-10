@@ -8,3 +8,6 @@ class Homework(models.Model):
     added_date = models.DateTimeField(default=now)
     due_date = models.DateTimeField()
     finished = models.BooleanField(default=False)
+
+    def __repr__(self):
+        return "<Homework id={0.id} subject={0.subject} name={0.name}>"
