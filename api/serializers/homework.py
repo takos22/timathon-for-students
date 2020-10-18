@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Homework
+from ..models import Homework
 
 
 class HomeworkSerializer(serializers.HyperlinkedModelSerializer):
