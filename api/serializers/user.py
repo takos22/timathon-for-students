@@ -1,11 +1,10 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
-from ..models import Homework
 from .homework import HomeworkSerializer
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     homeworks = HomeworkSerializer(many=True)
 
     class Meta:
