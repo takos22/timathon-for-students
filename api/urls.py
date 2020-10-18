@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     # Anyone
-    path("endpoints", views.endpoints),
+    path("endpoints", views.endpoints, name="endpoints"),
 
     # Authentificated
     path("homework/", views.homework_list),

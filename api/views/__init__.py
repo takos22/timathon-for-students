@@ -1,6 +1,8 @@
-from .endpoints import endpoints
+from .endpoints import EndpointsViewSet
 from .homework import HomeworkViewSet
 from .user import UserViewSet
+
+endpoints = EndpointsViewSet.as_view({"get": "list"})
 
 homework_list = HomeworkViewSet.as_view({"get": "list"})
 homework_retrieve = HomeworkViewSet.as_view({"get": "retrieve"})
