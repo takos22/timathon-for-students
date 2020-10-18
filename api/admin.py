@@ -3,4 +3,9 @@ from .models import Homework
 
 # Register your models here.
 
-admin.site.register(Homework)
+
+class HomeworkAdmin(admin.ModelAdmin):
+    list_display = ("id", "user", "subject", "name", "finished")
+
+
+admin.site.register(Homework, HomeworkAdmin)
