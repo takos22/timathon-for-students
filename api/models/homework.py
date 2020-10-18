@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 
 class Homework(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="homeworks")
     subject = models.CharField(max_length=128)
     name = models.CharField(max_length=128)
     description = models.TextField()
