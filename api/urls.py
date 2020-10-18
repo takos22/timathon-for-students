@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 
@@ -6,6 +6,7 @@ from . import views
 urlpatterns = [
     # Anyone
     path("endpoints", views.endpoints, name="endpoints"),
+    path("auth/", include("rest_framework.urls"), name="auth"),
 
     # Authentificated
     path("homework/", views.homework_list),
