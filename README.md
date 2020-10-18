@@ -15,8 +15,8 @@
 
 My submission for the 2nd Timathon. I made a website around the "For Students" theme:
 
-- an API
-- a website around the API
+- a website
+- an API for that website
 
 ## 📝 Table of Contents
 
