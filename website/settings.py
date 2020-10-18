@@ -14,6 +14,7 @@ import os
 import dotenv
 import json
 from pathlib import Path
+from django.urls import reverse_lazy
 
 dotenv.load_dotenv()
 
@@ -31,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = int(os.environ.get("DEBUG", 0))
 
 ALLOWED_HOSTS = json.loads(os.environ.get("ALLOWED_HOSTS", "[]"))
-
+LOGIN_REDIRECT_URL = reverse_lazy("endpoints")
 
 # Application definition
 
