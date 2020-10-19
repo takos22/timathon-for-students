@@ -9,8 +9,7 @@ class EndpointsViewSet(viewsets.GenericViewSet):
             {
                 "endpoints": {
                     "endpoints": "Get all the endpoints of the API.",
-                    "auth/login": "Log into the API.",
-                    "auth/logout": "Log out of the API.",
+                    "login": "Log into the API.",
                     "user": "Get a list with only your user (or all the users if you're admin).",
                     "user/<int:pk>": "Get a user by its id (pretty much useless if you're not admin).",
                     "homework": "Get a list of all the user's homeworks.",
