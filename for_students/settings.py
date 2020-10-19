@@ -33,7 +33,6 @@ DEBUG = int(os.environ.get("DEBUG", 0))
 
 ALLOWED_HOSTS = json.loads(os.environ.get("ALLOWED_HOSTS", "[]"))
 LOGIN_REDIRECT_URL = reverse_lazy("endpoints")
-APPEND_SLASH = False
 
 # Application definition
 
@@ -140,3 +139,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ],
+}
