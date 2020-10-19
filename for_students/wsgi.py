@@ -1,5 +1,5 @@
 """
-WSGI config for website project.
+WSGI config for for_students project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -14,6 +14,6 @@ from django.core.wsgi import get_wsgi_application
 
 dotenv.load_dotenv()
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'website.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "for_students.settings")
 
 application = get_wsgi_application()
