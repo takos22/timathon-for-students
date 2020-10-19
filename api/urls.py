@@ -7,7 +7,6 @@ urlpatterns = [
     # Anyone
     path("endpoints", views.endpoints, name="endpoints"),
     path("login", views.login, name="login"),
-    path("auth/", include("rest_framework.urls"), name="rest-framework-auth"),
 
     # Authentificated
     path("homework/", views.homework_list, name="homework-list"),
