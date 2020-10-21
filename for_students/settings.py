@@ -38,6 +38,7 @@ LOGIN_REDIRECT_URL = reverse_lazy("endpoints")
 
 INSTALLED_APPS = [
     "api.apps.ApiConfig",
+    "website.apps.WebsiteConfig",
     "rest_framework",
     "rest_framework.authtoken",
     "django.contrib.admin",
