@@ -3,6 +3,9 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <!-- CSS -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+        {% block head %}{% endblock head %}
         <!-- Bootstrap core CSS -->
         <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
         <title>{% block title %}{% endblock title %}</title>
@@ -24,26 +27,38 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'index' %}"
-                                >Home
-                                <span class="sr-only">(current)</span>
+                        {% with request.resolver_match.view_name as view_name %}
+                        <li class="nav-item{% if view_name == 'index'%} active{% endif %}">
+                            <a class="nav-link" href="{% url 'index' %}">
+                                Home
+                                {% if view_name == 'index'%}<span class="sr-only">(current)</span>{% endif %}
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'homework' %}">Homeworks</a>
+                        <li class="nav-item{% if view_name == 'homework'%} active{% endif %}">
+                            <a class="nav-link" href="{% url 'homework' %}">
+                                Homeworks
+                                {% if view_name == 'homework'%}<span class="sr-only">(current)</span>{% endif %}
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account' %}">Account</a>
+                        <li class="nav-item{% if view_name == 'account'%} active{% endif %}">
+                            <a class="nav-link" href="{% url 'account' %}">
+                                Account
+                                {% if view_name == 'account'%}<span class="sr-only">(current)</span>{% endif %}
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <li class="nav-item{% if view_name == 'contact'%} active{% endif %}">
+                            <a class="nav-link" href="{% url 'contact' %}">
+                                Contact
+                                {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %}
+                            </a>
                         </li>
+                        {% endwith %}
                     </ul>
                 </div>
             </div>
         </nav>
         {% block content %} {% endblock content %}
+
         <!-- Bootstrap core JavaScript -->
         <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
         <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
