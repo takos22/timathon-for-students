@@ -11,9 +11,10 @@
         <title>{% block title %}{% endblock title %}</title>
     </head>
     <body>
+        <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <div class="container">
-                <a class="navbar-brand" href="#">For students</a>
+                <a class="navbar-brand" href="{% url 'index' %}">For students</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -30,26 +31,22 @@
                         {% with request.resolver_match.view_name as view_name %}
                         <li class="nav-item{% if view_name == 'index'%} active{% endif %}">
                             <a class="nav-link" href="{% url 'index' %}">
-                                Home
-                                {% if view_name == 'index'%}<span class="sr-only">(current)</span>{% endif %}
+                                Home {% if view_name == 'index'%}<span class="sr-only">(current)</span>{% endif %}
                             </a>
                         </li>
                         <li class="nav-item{% if view_name == 'homework'%} active{% endif %}">
                             <a class="nav-link" href="{% url 'homework' %}">
-                                Homeworks
-                                {% if view_name == 'homework'%}<span class="sr-only">(current)</span>{% endif %}
+                                Homeworks {% if view_name == 'homework'%}<span class="sr-only">(current)</span>{% endif %}
                             </a>
                         </li>
                         <li class="nav-item{% if view_name == 'account'%} active{% endif %}">
                             <a class="nav-link" href="{% url 'account' %}">
-                                Account
-                                {% if view_name == 'account'%}<span class="sr-only">(current)</span>{% endif %}
+                                Account {% if view_name == 'account'%}<span class="sr-only">(current)</span>{% endif %}
                             </a>
                         </li>
                         <li class="nav-item{% if view_name == 'contact'%} active{% endif %}">
                             <a class="nav-link" href="{% url 'contact' %}">
-                                Contact
-                                {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %}
+                                Contact {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %}
                             </a>
                         </li>
                         {% endwith %}
@@ -57,8 +54,8 @@
                 </div>
             </div>
         </nav>
-        {% block content %} {% endblock content %}
-
+        <!-- Content -->
+        <div class="container">{% block content %} {% endblock content %}</div>
         <!-- Bootstrap core JavaScript -->
         <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
         <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
