@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- CSS -->
         <link href="{% static 'css/style.css' %}" rel="stylesheet" />
         {% block head %}{% endblock head %}
@@ -55,7 +56,7 @@
             </div>
         </nav>
         <!-- Content -->
-        <div class="container">{% block content %} {% endblock content %}</div>
+        <div class="container mt-3">{% block content %} {% endblock content %}</div>
         <!-- Bootstrap core JavaScript -->
         <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
         <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
