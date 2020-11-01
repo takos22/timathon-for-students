@@ -1,4 +1,77 @@
-{% extends 'base.html' %}
-{% block title %}Home{% endblock title %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock title %} {% block header %}
+<!-- Full Page Intro -->
+<div
+  class="view"
+  style="background-image: url({% static 'img/homework.jpg' %}); background-repeat: no-repeat; background-size: cover; background-position: center center"
+>
+  <!-- Mask & flexbox options-->
+  <div class="mask rgba-black-light align-items-center">
+    <!-- Content -->
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-12 mb-4 text-white text-center" style="margin-top: 30%;">
+          <h1 class="h1-reponsive text-white text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s">
+            <strong>Project for students</strong>
+          </h1>
+          <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s" />
+          <h5 class="text-uppercase mb-4 text-white wow fadeInDown" data-wow-delay="0.4s"><strong>Homework management</strong></h5>
+          <a class="btn btn-secondary wow fadeInDown" data-wow-delay="0.4s" href="{% url 'homework' %}">Homeworks</a>
+          <a class="btn btn-secondary wow fadeInDown" data-wow-delay="0.4s" href="{% url 'account' %}">Account</a>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Content -->
+  </div>
+  <!-- Mask & flexbox options-->
+</div>
+<!-- Full Page Intro -->
+{% endblock header %} {% block content %}
+<main>
+  <div class="container">
+    <!--Grid row-->
+    <div class="row py-5">
+      <!--Grid column-->
+      <div class="col-md-12 text-justify">
+        <p class="lead">
+          My submission for the 2nd Timathon. I made a website around the "For Students" theme:
+          <ul>
+            <li>a website</li>
+            <li>an API for that website</li>
+          </ul>
+        </p>
+        <h4>🧐 Problem statement</h4>
+        <p>
+          The timathon theme is "For students". So I had to make something that could be useful for students and that could help them in their everyday life.
+        </p>
+        <h4>💡 Idea / Solution</h4>
+        <p>
+          I thought about making an API for homeworks, timetables (not implemented yet) and other things useful to students. However an API alone isn't that easy to use, you would
+          have to write code and not every student can do that, that's why I decided to make a website for it.
+        </p>
+        <p>
+          Students are able to add homeworks, timetables (not implemented yet) and more things that could help them at school.
+        </p>
+        <h4>🎈 Usage</h4>
+        <p>
+          Go on the <a href="{% url 'account' %}">account page</a>, create your account, then you can use the following functionalities:
+          <ul>
+            <li><a href="{% url 'homework' %}">Create and manage homeworks</a></li>
+            <li><a href="#">Create and manage your timetable (not implemented yet)</a></li>
+          </ul>
+        </p>
+        <h4>🚀 Future Scope</h4>
+        <p>
+          I'm going to add more endpoints to the API so more functionalities on the website, like timetable management. If you have any ideas/suggestions, you can leave an issue
+          with a <a href="https://github.com/takos22/timathon2-for-students/labels/feature%20request">feature request tag</a>.
+        </p>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+</main>
 {% endblock content %}
