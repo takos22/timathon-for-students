@@ -83,7 +83,7 @@ WSGI_APPLICATION = "for_students.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if os.environ.get("ENV", "DEV") == "PROD":
+if os.environ.get("ENV", "PROD") == "PROD":
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
