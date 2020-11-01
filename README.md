@@ -37,16 +37,16 @@ The timathon theme is "For students". So I had to make something that could be u
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-I thought about making an API for homeworks, timetables and other things useful to students. However an API alone isn't that easy to use, you would have to write code and not every student can do that, that's why I decided to make a website for it.
+I thought about making an API for homeworks, timetables (not implemented yet) and other things useful to students. However an API alone isn't that easy to use, you would have to write code and not every student can do that, that's why I decided to make a website for it.
 
-Students are able to add homeworks, timetables and more things that could help them at school.
+Students are able to add homeworks, timetables (not implemented yet) and more things that could help them at school.
 
 ## 🎈 Usage <a name="usage"></a>
 
-Go on the [website](index), create your account, then you can use the following functionalities:
+Go on the [website](https://for-students-takos.herokuapp.com/), create your account, then you can use the following functionalities:
 
-- [Create and manage homework](homework)
-- [Create and manage your timetable](timetable)
+- [Create and manage homework](https://for-students-takos.herokuapp.com/homework/)
+- [Create and manage your timetable (not implemented yet)](#)
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
