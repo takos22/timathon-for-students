@@ -1,73 +1,98 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- CSS -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-        {% block head %}{% endblock head %}
-        <!-- Bootstrap core CSS -->
-        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
-        <title>{% block title %}{% endblock title %}</title>
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'index' %}">For students</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        {% with request.resolver_match.view_name as view_name %}
-                        <li class="nav-item{% if view_name == 'index'%} active{% endif %}">
-                            <a class="nav-link" href="{% url 'index' %}">
-                                Home {% if view_name == 'index'%}<span class="sr-only">(current)</span>{% endif %}
-                            </a>
-                        </li>
-                        <li class="nav-item{% if view_name == 'homework'%} active{% endif %}">
-                            <a class="nav-link" href="{% url 'homework' %}">
-                                Homeworks {% if view_name == 'homework'%}<span class="sr-only">(current)</span>{% endif %}
-                            </a>
-                        </li>
-                        <li class="nav-item{% if view_name == 'account'%} active{% endif %}">
-                            <a class="nav-link" href="{% url 'account' %}">
-                                Account {% if view_name == 'account'%}<span class="sr-only">(current)</span>{% endif %}
-                            </a>
-                        </li>
-                        <li class="nav-item{% if view_name == 'contact'%} active{% endif %}">
-                            <a class="nav-link" href="{% url 'contact' %}">
-                                Contact {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %}
-                            </a>
-                        </li>
-                        {% endwith %}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Content -->
-        <div class="container mt-3">{% block content %} {% endblock content %}</div>
-        <!-- Alerts -->
-        <div class="alerts">
-            <!--
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    {% block head %}{% endblock head %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <!-- WOW core CSS -->
+    <link href="{% static 'vendor/wow/css/animate.min.css' %}" rel="stylesheet" />
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'index' %}"><strong>For students</strong></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              {% with request.resolver_match.view_name as view_name %}
+              <li class="nav-item{% if view_name == 'index'%} active{% endif %}">
+                <a class="nav-link" href="{% url 'index' %}"> Home {% if view_name == 'index'%}<span class="sr-only">(current)</span>{% endif %} </a>
+              </li>
+              <li class="nav-item{% if view_name == 'homework'%} active{% endif %}">
+                <a class="nav-link" href="{% url 'homework' %}"> Homeworks {% if view_name == 'homework'%}<span class="sr-only">(current)</span>{% endif %} </a>
+              </li>
+              <li class="nav-item{% if view_name == 'account'%} active{% endif %}">
+                <a class="nav-link" href="{% url 'account' %}"> Account {% if view_name == 'account'%}<span class="sr-only">(current)</span>{% endif %} </a>
+              </li>
+              <li class="nav-item{% if view_name == 'contact'%} active{% endif %}">
+                <a class="nav-link" href="{% url 'contact' %}"> Contact {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %} </a>
+              </li>
+              {% endwith %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+      {% block header %}{% endblock header %}
+    </header>
+
+    <!-- Content -->
+    {% block content %}{% endblock content %}
+    <!-- Alerts -->
+    <div class="alerts">
+      <!--
             <div class="alert alert-success alert-dismissible fade show">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Success!</strong> This alert box could indicate a successful or positive action.
             </div>
             -->
-        </div>
-        <!-- Bootstrap core JavaScript -->
-        <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
-        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    </body>
+    </div>
+    <!-- JQuery core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- WOW core JavaScript -->
+    <script src="{% static 'vendor/wow/js/wow.min.js' %}"></script>
+    <script>
+      // Animations init
+      $(document).ready(function(){
+        new WOW().init();
+      });
+    </script>
+    <!-- Custom JavaScript -->
+    <script>
+      $(document).ready(function () {
+        // Put your offset checking in a function
+        function checkOffset() {
+          $(".scrolling-navbar").toggleClass("top-nav-collapse", $(".navbar").offset().top > 50);
+        }
+
+        // Run it when the page loads
+        checkOffset();
+
+        // Run function when scrolling
+        $(window).scroll(function () {
+          checkOffset();
+        });
+      });
+    </script>
+  </body>
 </html>
