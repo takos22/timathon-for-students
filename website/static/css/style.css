@@ -1,0 +1,50 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #303030 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+.navbar:not(.top-nav-collapse) .navbar-brand {
+  background: #30303088 !important;
+  padding: 10px;
+  border: 2px hidden #000000;
+  border-radius: 5px;
+
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #303030 !important;
+  }
+}
+
+h1 {
+  letter-spacing: 5px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 5px solid #fff;
+  width: 80px;
+}
