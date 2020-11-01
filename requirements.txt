@@ -2,3 +2,4 @@ django
 djangorestframework
 psycopg2
 python-dotenv
+django-heroku
