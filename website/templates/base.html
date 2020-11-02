@@ -42,9 +42,11 @@
               <li class="nav-item{% if view_name == 'account'%} active{% endif %}">
                 <a class="nav-link" href="{% url 'account' %}"> Account {% if view_name == 'account'%}<span class="sr-only">(current)</span>{% endif %} </a>
               </li>
+              {% comment %}
               <li class="nav-item{% if view_name == 'contact'%} active{% endif %}">
                 <a class="nav-link" href="{% url 'contact' %}"> Contact {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %} </a>
               </li>
+              {% endcomment %}
               {% endwith %}
             </ul>
           </div>
