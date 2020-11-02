@@ -1,4 +1,35 @@
-{% extends 'base.html' %}
-{% block title %}Homework{% endblock title %}
-{% block content %}
+{% extends 'base.html' %} {% block title %}Homework{% endblock title %} {% block content %}
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-4 text-white text-center">
+        <h1 class="h1-reponsive text-uppercase font-weight-bold mb-0 pt-md-5 pt-5">Homework</h1>
+      </div>
+    </div>
+    <div class="table-responsive-lg">
+      <table border="2" class="table table-hover">
+        <thead class="bg-primary">
+          <tr>
+            <th>Subject</th>
+            <th>Name</th>
+            <th>Due date</th>
+            <th>Finished</th>
+          </tr>
+        </thead>
+        {% for homework in homeworks %}
+        <tr>
+          <td>{{ homework.subject }}</td>
+          <td>{{ homework.name }}</td>
+          <td>{{ homework.due_date }}</td>
+          <td>
+            <div class="checkbox mb-3">
+              <label> <input type="checkbox" value="remember-me" {% if homework.finshed %}checked{% endif %} /> </label>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</main>
 {% endblock content %}
