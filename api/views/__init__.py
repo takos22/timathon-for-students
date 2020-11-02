@@ -5,8 +5,8 @@ from .login import LoginAPI
 
 endpoints = EndpointsViewSet.as_view({"get": "list"})
 
-homework_list = HomeworkViewSet.as_view({"get": "list"})
-homework_retrieve = HomeworkViewSet.as_view({"get": "retrieve"})
+homework_list = HomeworkViewSet.as_view({"get": "list", "post": "create"})
+homework_retrieve = HomeworkViewSet.as_view({"get": "retrieve", "post": "update"})
 
 user_list = UserViewSet.as_view({"get": "list"})
 user_retrieve = UserViewSet.as_view({"get": "retrieve"})
