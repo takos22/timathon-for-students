@@ -1,6 +1,6 @@
 html,
 body,
-header,
+.header,
 .view {
   height: 100%;
 }
@@ -8,7 +8,7 @@ header,
 @media (max-width: 740px) {
   html,
   body,
-  header,
+  .header,
   .view {
     height: 100vh;
   }
@@ -47,4 +47,8 @@ h5 {
 .hr-light {
   border-top: 5px solid #fff;
   width: 80px;
+}
+
+.mt-6 {
+  margin-top: 5rem;
 }
