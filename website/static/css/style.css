@@ -27,7 +27,6 @@ body,
   padding: 10px;
   border: 2px hidden #000000;
   border-radius: 5px;
-
 }
 
 @media (max-width: 991px) {
@@ -51,4 +50,44 @@ h5 {
 
 .mt-6 {
   margin-top: 5rem;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin .top-input {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin .middle-input {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+.form-signin .bottom-input {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

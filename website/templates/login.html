@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block title %}Login{% endblock title %} {% block content %}
+<main>
+  <div class="container text-center">
+    {% if next %} {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %} {% endif %}
+    <form method="post" action="{% url 'login' %}" class="form-signin">
+      {% csrf_token %}
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="id_username" class="sr-only">Username</label>
+      <input
+        type="text"
+        name="username"
+        autofocus
+        autocapitalize="none"
+        autocomplete="username"
+        maxlength="150"
+        required
+        id="id_username"
+        placeholder="Username"
+        class="form-control top-input"
+      />
+      <label for="id_password" class="sr-only">Password</label>
+      <input
+        type="password"
+        name="password"
+        autocomplete="current-password"
+        required
+        id="id_password"
+        placeholder="Password"
+        class="form-control bottom-input"
+      />
+      <div class="checkbox mb-3">
+        <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+      <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+  </div>
+</main>
+{% endblock content %}
