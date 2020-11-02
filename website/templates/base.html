@@ -74,16 +74,21 @@
     <script src="{% static 'vendor/wow/js/wow.min.js' %}"></script>
     <script>
       // Animations init
-      $(document).ready(function(){
+      $(document).ready(function () {
         new WOW().init();
       });
     </script>
     <!-- Custom JavaScript -->
     <script>
+      let viewName = "{{ view_name }}"
       $(document).ready(function () {
         // Put your offset checking in a function
         function checkOffset() {
-          $(".scrolling-navbar").toggleClass("top-nav-collapse", $(".navbar").offset().top > 50);
+          if (viewName == "index") {
+            $(".scrolling-navbar").toggleClass("top-nav-collapse", $(".navbar").offset().top > 50);
+          } else {
+            $(".scrolling-navbar").addClass("top-nav-collapse")
+          }
         }
 
         // Run it when the page loads
