@@ -14,7 +14,8 @@
     <title>{% block title %}{% endblock title %}</title>
   </head>
   <body>
-    <header>
+    {% with request.resolver_match.view_name as view_name %}
+    <header class="{% if view_name == 'index'%}header{% else %}mt-6{% endif %}">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
         <div class="container">
@@ -32,7 +33,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              {% with request.resolver_match.view_name as view_name %}
               <li class="nav-item{% if view_name == 'index'%} active{% endif %}">
                 <a class="nav-link" href="{% url 'index' %}"> Home {% if view_name == 'index'%}<span class="sr-only">(current)</span>{% endif %} </a>
               </li>
@@ -47,7 +47,6 @@
                 <a class="nav-link" href="{% url 'contact' %}"> Contact {% if view_name == 'contact'%}<span class="sr-only">(current)</span>{% endif %} </a>
               </li>
               {% endcomment %}
-              {% endwith %}
             </ul>
           </div>
         </div>
@@ -96,5 +95,6 @@
         });
       });
     </script>
+    {% endwith %}
   </body>
 </html>
