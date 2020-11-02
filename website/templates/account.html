@@ -1,4 +1,17 @@
-{% extends 'base.html' %}
-{% block title %}Account{% endblock title %}
-{% block content %}
+{% extends 'base.html' %} {% block title %}Account{% endblock title %} {% block content %}
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-4 text-white text-center">
+        <h1 class="h1-reponsive text-uppercase font-weight-bold mb-3 pt-md-5">Account</h1>
+        {% if user.is_authenticated %}
+        <a class="btn btn-lg btn-primary" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a class="btn btn-lg btn-primary" href="{% url 'signup' %}">Sign up</a>
+        <a class="btn btn-lg btn-secondary" href="{% url 'login' %}">Login</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</main>
 {% endblock content %}
