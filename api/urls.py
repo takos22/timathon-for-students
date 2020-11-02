@@ -5,14 +5,14 @@ from . import views
 
 urlpatterns = [
     # Anyone
-    path("endpoints", views.endpoints, name="endpoints"),
-    path("login", views.login, name="login"),
+    path("endpoints", views.endpoints, name="api.endpoints"),
+    path("login", views.login, name="api.login"),
 
     # Authentificated
-    path("homework/", views.homework_list, name="homework-list"),
-    path("homework/<int:pk>/", views.homework_retrieve, name="homework-retrieve"),
+    path("homework/", views.homework_list, name="api.homework-list"),
+    path("homework/<int:pk>/", views.homework_retrieve, name="api.homework-retrieve"),
 
     # Admin
-    path("user/", views.user_list, name="user-list"),
-    path("user/<int:pk>/", views.user_retrieve, name="user-retrieve"),
+    path("user/", views.user_list, name="api.user-list"),
+    path("user/<int:pk>/", views.user_retrieve, name="api.user-retrieve"),
 ]
