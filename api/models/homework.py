@@ -12,4 +12,4 @@ class Homework(models.Model):
     finished = models.BooleanField(default=False)
 
     def __repr__(self):
-        return "<Homework id={0.id} subject={0.subject} name={0.name}>".format(self)
+        return "<Homework id={0.id} subject={0.subject!r} name={0.name!r}>".format(self)
