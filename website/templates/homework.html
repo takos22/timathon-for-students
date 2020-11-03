@@ -62,6 +62,7 @@
           <tr>
             <th>Subject</th>
             <th>Name</th>
+            <th>Description</th>
             <th>Due date</th>
             <th>Finished</th>
           </tr>
@@ -70,6 +71,7 @@
         <tr>
           <td>{{ homework.subject }}</td>
           <td>{{ homework.name }}</td>
+          <td>{{ homework.description }}</td>
           <td>{{ homework.due_date|date:'Y-m-d H:i' }}</td>
           <td class="text-center">
             <div class="checkbox">

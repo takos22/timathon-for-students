@@ -41,6 +41,7 @@ function success(result, status, xhr) {
   tr.innerHTML = `
           <td>${result.subject}</td>
           <td>${result.name}</td>
+          <td>${result.description}</td>
           <td>${dateStr}</td>
           <td class="text-center">
             <div class="checkbox">
