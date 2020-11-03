@@ -11,6 +11,53 @@
         <a class="btn btn-lg btn-secondary" href="{% url 'login' %}">Login</a>
         {% endif %}
       </div>
+      {% if user.is_authenticated %}
+      <div class="row profile w-100">
+        <div class="col-md-4">
+          <div class="profile-sidebar">
+            <!-- SIDEBAR USER TITLE -->
+            <div class="profile-usertitle">
+              <div class="profile-usertitle-name text-white">{{ user.username }}</div>
+              <div class="profile-usertitle-job text-primary">{{ user.email }}</div>
+            </div>
+            <!-- END SIDEBAR USER TITLE -->
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="profile-content">
+            <div class="table-responsive-lg">
+              <div class="text-center">
+                <h4>Unfinished homework</h4>
+              </div>
+              <table border="2" id="homeworkTable" class="table table-hover">
+                <thead class="bg-primary">
+                  <tr>
+                    <th>Subject</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Due date</th>
+                    <th>Finished</th>
+                  </tr>
+                </thead>
+                {% for homework in homeworks %}
+                <tr>
+                  <td>{{ homework.subject }}</td>
+                  <td>{{ homework.name }}</td>
+                  <td>{{ homework.description }}</td>
+                  <td>{{ homework.due_date|date:'Y-m-d H:i' }}</td>
+                  <td class="text-center">
+                    <div class="checkbox">
+                      <label> <input type="checkbox" value="finished" {% if homework.finished %}checked{% endif %} /> </label>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 </main>
