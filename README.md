@@ -7,13 +7,13 @@
 <div align="center">
 
 [![Timathon](https://img.shields.io/badge/Timathon-For%20Students-blue.svg)](https://twtcodejam.net/)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
+[![Website](https://img.shields.io/badge/Website-Up-brightgreen.svg)](https://for-students-takos.herokuapp.com/)
 
 </div>
 
 ---
 
-My submission for the 2nd Timathon. I made a website alone around the "For Students" theme:
+My submission for the 2nd Timathon. I made a [website](https://for-students-takos.herokuapp.com/) alone around the "For Students" theme:
 
 - a website
 - an API for that website
@@ -100,6 +100,8 @@ py manage.py runserver
 
 - [Python](https://python.org/) - Language
 - [Django](https://www.djangoproject.com/) - Backend for the API and website
+- [Bootstrap](https://getbootstrap.com/) - Frontend styling framework
+- [Heroku](https://www.heroku.com/) - Hosting
 
 ## ✍️ Authors <a name = "authors"></a>
 
