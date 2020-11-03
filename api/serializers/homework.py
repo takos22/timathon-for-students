@@ -2,11 +2,9 @@ from rest_framework import serializers
 
 from ..models import Homework
 
-from .user import UserSerializer
-
 
 class HomeworkSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    user = serializers.ReadOnlyField(source="user.id")
 
     class Meta:
         model = Homework
