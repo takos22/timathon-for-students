@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block title %}Homework{% endblock title %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}Homework{% endblock title %} {% block content %}
 <main>
   <div class="container">
     <div class="row">
@@ -23,7 +23,7 @@
           <td>{{ homework.due_date }}</td>
           <td>
             <div class="checkbox mb-3">
-              <label> <input type="checkbox" value="remember-me" {% if homework.finshed %}checked{% endif %} /> </label>
+              <label> <input type="checkbox" value="finished" {% if homework.finished %}checked{% endif %} /> </label>
             </div>
           </td>
         </tr>
@@ -32,4 +32,6 @@
     </div>
   </div>
 </main>
-{% endblock content %}
+{% endblock content %} {% block script %}
+<script src="{% static 'js/homework.js' %}"></script>
+{% endblock script %}
