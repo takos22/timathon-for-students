@@ -13,10 +13,12 @@
 
 ---
 
-My submission for the 2nd Timathon. I made a website around the "For Students" theme:
+My submission for the 2nd Timathon. I made a website alone around the "For Students" theme:
 
 - a website
 - an API for that website
+
+Doing all this alone was really hard but I somehow managed to pull it off.
 
 ## 📝 Table of Contents
 
