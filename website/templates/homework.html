@@ -6,8 +6,58 @@
         <h1 class="h1-reponsive text-uppercase font-weight-bold mb-0 pt-md-5 pt-5">Homework</h1>
       </div>
     </div>
+    <div class="mb-5">
+      <form action="javascript://" class="w-50 m-auto" id="homeworkForm">
+        <span id="url" style="display: none">{% url 'api.homework-list' %}</span>
+        <span id="token" style="display: none">{{ token }}</span>
+        <h3 class="h3 mb-3 font-weight-normal">Add a homework</h3>
+        <label for="id_subject" class="sr-only">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          autofocus
+          required
+          id="id_subject"
+          placeholder="Subject"
+          class="form-control"
+        />
+        <label for="id_name" class="sr-only">Name</label>
+        <input
+          type="text"
+          name="name"
+          required
+          id="id_name"
+          placeholder="Name"
+          class="form-control mb-1"
+        />
+        <label for="id_description" class="sr-only">Description</label>
+        <textarea
+          type="textarea"
+          name="description"
+          required
+          id="id_description"
+          placeholder="Description"
+          rows="3"
+          class="form-control"
+        ></textarea>
+        <label for="id_due_date" class="sr-only">Due date</label>
+        <input
+          type="datetime-local"
+          name="due_date"
+          autocomplete="due_date"
+          required
+          id="id_due_date"
+          placeholder="Due date"
+          class="form-control mt-1"
+        />
+        <div class="checkbox" style="font-size: large;">
+          <label> <input id="finishedCheckbox" type="checkbox" value="finished" /> Finished</label>
+        </div>
+        <button id="submitForm" class="btn btn-lg btn-primary btn-block">Add homework</button>
+      </form>
+    </div>
     <div class="table-responsive-lg">
-      <table border="2" class="table table-hover">
+      <table border="2" id="homeworkTable" class="table table-hover">
         <thead class="bg-primary">
           <tr>
             <th>Subject</th>
@@ -20,9 +70,9 @@
         <tr>
           <td>{{ homework.subject }}</td>
           <td>{{ homework.name }}</td>
-          <td>{{ homework.due_date }}</td>
-          <td>
-            <div class="checkbox mb-3">
+          <td>{{ homework.due_date|date:'Y-m-d H:i' }}</td>
+          <td class="text-center">
+            <div class="checkbox">
               <label> <input type="checkbox" value="finished" {% if homework.finished %}checked{% endif %} /> </label>
             </div>
           </td>
