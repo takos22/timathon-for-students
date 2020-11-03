@@ -13,7 +13,11 @@
 
 ---
 
-My submission for the 2nd Timathon. I made a [website](https://for-students-takos.herokuapp.com/) alone around the "For Students" theme:
+This website is a homework management system made for students, 
+they can add homework, keep track of it and make sure they have 
+ everything so they will have good grades. I made a 
+whole [website](https://for-students-takos.herokuapp.com/) alone 
+around the "For Students" theme with 2 big parts:
 
 - a website
 - an API for that website
