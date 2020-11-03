@@ -5,8 +5,8 @@ from . import views
 
 urlpatterns = [
     # Anyone
-    path("endpoints", views.endpoints, name="api.endpoints"),
-    path("login", views.login, name="api.login"),
+    path("endpoints/", views.endpoints, name="api.endpoints"),
+    path("login/", views.login, name="api.login"),
 
     # Authentificated
     path("homework/", views.homework_list, name="api.homework-list"),
