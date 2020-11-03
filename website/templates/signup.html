@@ -57,6 +57,7 @@
       />
       <button type="submit" class="btn btn-lg btn-primary btn-block">Sign up</button>
       <input type="hidden" name="next" value="{{ next }}" />
+      <h6 class="mt-3"><a href="{% url 'login' %}">You already have an account? Login here.</a></h6>
       <h4 class="mt-3">Help:</h4>
       {% for field in form %}
       {% if field.help_text %}
