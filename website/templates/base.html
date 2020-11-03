@@ -14,7 +14,16 @@
     <title>{% block title %}{% endblock title %}</title>
   </head>
   <body>
-    {% with request.resolver_match.view_name as view_name %}
+    {% with request.resolver_match.view_name as view_name %} {% if view_name == 'index' %}
+    <style>
+      html,
+      body,
+      .header,
+      .view {
+        height: 100%;
+      }
+    </style>
+    {% endif %}
     <header class="{% if view_name == 'index'%}header{% else %}mt-6{% endif %}">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
@@ -80,14 +89,14 @@
     </script>
     <!-- Custom JavaScript -->
     <script>
-      let viewName = "{{ view_name }}"
+      let viewName = "{{ view_name }}";
       $(document).ready(function () {
         // Put your offset checking in a function
         function checkOffset() {
           if (viewName == "index") {
             $(".scrolling-navbar").toggleClass("top-nav-collapse", $(".navbar").offset().top > 50);
           } else {
-            $(".scrolling-navbar").addClass("top-nav-collapse")
+            $(".scrolling-navbar").addClass("top-nav-collapse");
           }
         }
 
@@ -100,7 +109,6 @@
         });
       });
     </script>
-    {% block script %}{% endblock script %}
-    {% endwith %}
+    {% block script %}{% endblock script %} {% endwith %}
   </body>
 </html>
