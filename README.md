@@ -8,6 +8,7 @@
 
 [![Timathon](https://img.shields.io/badge/Timathon-For%20Students-blue.svg)](https://twtcodejam.net/)
 [![Website](https://img.shields.io/badge/Website-Up-brightgreen.svg)](https://for-students-takos.herokuapp.com/)
+[![Made by Takos#0001](https://img.shields.io/badge/Made%20by-Takos-20e0ff.svg)](https://github.com/takos22/)
 
 </div>
 
