@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  <img src="https://cdn.discordapp.com/attachments/534693705442131988/738457979665252362/bannerbig.png" alt="Project logo"></a>
 </p>
-<h2 align="center">Thimathon - For Students</h2>
+<h2 align="center">Timathon - For Students</h2>
 
 <div align="center">
 
