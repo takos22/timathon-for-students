@@ -49,6 +49,7 @@ function success(result, status, xhr) {
             </div>
           </td>`;
   $("#homeworkTable")[0].append(tr);
+  alert("Homework added");
 }
 
 function error(xhr, status, error) {
