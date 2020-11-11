@@ -24,6 +24,7 @@ around the "For Students" theme with 2 big parts:
 - an API for that website
 
 Doing all this alone was really hard but I somehow managed to pull it off.
+Make sure to follow my github account at [takos22](https://github.com/takos22). 
 
 ## 📝 Table of Contents
 
